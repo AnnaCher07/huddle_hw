@@ -13,9 +13,13 @@ p {
 }
 p,
 a,
-button {
+button,
+li {
   font-family: "Open Sans";
   font-style: normal;
+}
+a {
+  text-decoration: none;
 }
 h1,
 h2,
@@ -36,7 +40,6 @@ body {
 }
 header {
   height: 721px;
-  margin-bottom: 160px;
   background-color: #edfbff;
   background-image: url(../images/bg-hero-desktop.svg);
   background-size: contain;
@@ -103,8 +106,9 @@ h1 {
 }
 
 /* MAIN */
+
 main {
-  padding-block-start: 160px;
+  padding-block: 160px 344px;
   padding-inline: 104px;
 }
 h2 {
@@ -137,12 +141,43 @@ h2 {
   width: 490px;
 }
 
-/* a {
+/* FOOTER */
+
+footer {
+  /* height: 418px; */
+  background-color: #00252e;
+  color: #fff;
+  position: relative;
+  padding-block: 144px 64px;
+  padding-inline: 120px 78px;
+  margin: 0;
+}
+.question {
+  width: 800px;
+  height: 280px;
+  padding-inline: 132px 127px;
+  padding-block: 56px 52px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.07);
+  position: absolute;
+  left: 25%;
+  top: -45%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 60px;
+}
+.question a {
   width: 400px;
   height: 80px;
   color: #fff;
   text-decoration: none;
-  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
@@ -152,15 +187,56 @@ h2 {
   display: inline-block;
   padding-block: 25px;
   padding-inline: 100px 99px;
-} */
+}
+.footer {
+  width: 1242px;
+  height: 210px;
+}
 
-/* FOOTER */
-
-footer {
-  background-color: #00252e;
-  color: #fff;
+address {
+  width: 340px;
+  padding-left: 28px;
 }
 footer a {
-  text-decoration: none;
   color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 14px;
+}
+.footer img {
+  margin-bottom: 32px;
+}
+.footer .flx {
+  column-gap: 147px;
+  align-items: flex-start;
+}
+/* .locate {
+  position: absolute;
+  background-image: url(../images/locate.png);
+  background-repeat: no-repeat;
+  left: 0;
+}
+.phone {
+   position: absolute;
+  background-image: url(../images/phone.png);
+  background-repeat: no-repeat;
+  left: 0;
+}
+.mail {
+   position: absolute;
+  background-image: url(../images/mail.png);
+  background-repeat: no-repeat;
+  left: 0;
+} */
+.copyright {
+  position: absolute;
+  right: -18%;
+  bottom: 0;
+  font-family: Poppins;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
 }
