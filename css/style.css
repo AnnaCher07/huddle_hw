@@ -9,7 +9,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin: 0 auto;
 }
 p,
 a,
@@ -31,20 +31,18 @@ h3 {
   font-weight: 600;
   color: #00252e;
 }
-html,
-body {
-  /* width: 1440px; */
-  width: 100%;
-}
+
 .header,
 .main-info,
 .footer {
   max-width: 1270px;
+  margin-inline: auto;
 }
 .flx {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+  align-content: center;
 }
 header {
   height: 721px;
@@ -72,8 +70,9 @@ p {
   line-height: 27px;
 }
 .logo {
+  width: 1270px;
+  margin: 0 auto;
   padding-block: 60px 75px;
-  padding-inline: 80px;
   justify-content: space-between;
 }
 .logo a {
@@ -90,16 +89,15 @@ p {
   padding-inline: 63px 65px;
 }
 .logo a:hover {
-  color: #808E9A;
+  color: #808e9a;
+  transition: 0.5s;
 }
 .header {
+  width: 1270px;
   height: 482px;
-  justify-content: left;
-  margin-inline: 80px 90px;
+  justify-content: space-between;
+  margin-inline: auto;
   padding-top: 86px;
-  background-image: url(../images/list2.png), url(../images/list1.png);
-  background-repeat: no-repeat;
-  background-position: right bottom, right 6% top -7%;
 }
 .header a {
   margin-top: 32px;
@@ -117,18 +115,27 @@ p {
   padding-inline: 70px 69px;
 }
 .header a:hover {
-  background-color: #FF9ADB;
-box-shadow: (0px 6px 13px rgba(0, 37, 46, 0.22));
+  background-color: #ff9adb;
+  box-shadow: (0px 6px 13px rgba(0, 37, 46, 0.22));
+  transition: 0.5s;
 }
 h1 {
   margin-bottom: 32px;
+}
+.screen {
+  width: 684px;
+  height: 482px;
+  background-image: url(../images/screen2.png), url(../images/screen1.png);
+  background-repeat: no-repeat;
+  background-position: right bottom, left top;
 }
 
 /* MAIN */
 
 main {
   padding-block: 160px 344px;
-  padding-inline: 104px;
+  /* padding-inline: auto; */
+  
 }
 h2 {
   font-size: 28px;
@@ -170,19 +177,23 @@ footer {
 }
 .question {
   width: 800px;
-  height: 280px;
-  padding-inline: 132px 127px;
-  padding-block: 56px 52px;
+  height: 270px;
+  margin-inline: auto;
+  padding-block: 49px 47px;
   border-radius: 15px;
   background: #fff;
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.07);
   position: absolute;
-  left: 25%;
-  top: -45%;
+  left: 50%;
+  /* top: -67%; */
+  transform: translateX(-50%) translateY(-67%);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  row-gap: 32px;
+  align-content: center;
+  flex-wrap: wrap;
 }
 h3 {
   font-size: 32px;
@@ -205,16 +216,19 @@ h3 {
   padding-inline: 100px 99px;
 }
 .question a:hover {
-  background-color: #FF9ADB;
-box-shadow: (0px 6px 13px rgba(0, 37, 46, 0.22));
+  background-color: #ff9adb;
+  box-shadow: (0px 6px 13px rgba(0, 37, 46, 0.22));
+  transition: 0.5s;
 }
 .footer {
+  width: 1242px;
   padding-block: 144px 64px;
-  padding-inline: 120px 78px;
+  /* padding-inline: 120px 78px; */
 }
 .footer ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .footer li {
   font-size: 14px;
@@ -222,14 +236,17 @@ box-shadow: (0px 6px 13px rgba(0, 37, 46, 0.22));
   line-height: 24px;
   margin-bottom: 12px;
   line-height: 27px;
+  margin: 0;
 }
 
 .footer img {
+  width: 152px;
+  height: 24px;
   margin-bottom: 32px;
 }
 .footer .flx {
   width: 1242px;
-  height: 210px;
+  height: 158px;
   column-gap: 130px;
   align-items: flex-start;
 }
@@ -240,9 +257,22 @@ address {
 .flx address li {
   margin-bottom: 17px;
 }
+.flx address li:last-child {
+  margin-bottom: 0;
+}
 .footer nav.flx {
-  width: 341px;
-  column-gap: 143px;
+  margin: 0;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 12px;
+}
+address a:hover,
+nav a:hover {
+  text-decoration-line: underline;
 }
 .locate {
   width: 380px;
@@ -268,9 +298,14 @@ address {
   background-repeat: no-repeat;
   background-position: left top;
 }
+.social {
+  flex-direction: column;
+  row-gap: 110px;
+}
 .social ul {
   display: flex;
   column-gap: 14px;
+  height: 32px;
 }
 .social a {
   display: inline-block;
@@ -281,13 +316,12 @@ address {
 }
 
 .social a svg:hover path {
-  fill: #ff52c1
+  fill: #ff52c1;
+  transition: 0.5s;
 }
 
 .copyright {
-  position: absolute;
-  right: -13%;
-  bottom: 10%;
+  width: 262px;
   font-family: Poppins;
   color: #fff;
   font-size: 12px;
